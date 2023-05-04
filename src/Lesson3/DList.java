@@ -13,7 +13,7 @@ public class DList {
         return head;
     }
 
-    // функция заполненич списка из элементов массива
+    // функция заполнения списка из элементов массива
     public static void setList(int[] arrayData) {
         for (int el : arrayData) {
             addAtEnd(el);
@@ -55,7 +55,6 @@ public class DList {
         System.out.println(node.value);
     }
 
-
     // функция разворота двусвязного списка
     public static Node reverse(Node head) {
         Node before = null;
@@ -71,14 +70,14 @@ public class DList {
         return head;
     }
 
-    // процедура замены ссылок предудущего на следующий элемент узла
+    // процедура замены ссылок одного узла
     public static void swapSingle(Node node) {
         Node temp = node.prevNode;
         node.prevNode = node.nextNode;
         node.nextNode = temp;
     }
 
-    // процедура перестановки предудущего и следующего элементов узла
+    // процедура замены ссылок двух узлов
     public static void swapDual(Node node1, Node node2) {
         Node temp1 = node1.prevNode;
         Node temp2 = node1.nextNode;
